@@ -28,6 +28,13 @@ export const LocationQuestion = ({
         <Card className="p-0">
             <CardHeader>1. Podaj dane geolokalizacyjne:</CardHeader>
             <CardContent className="flex flex-col gap-2">
+                <div
+                    key={"Adres:"}
+                    className="flex flex-row items-center gap-2"
+                >
+                    <Label className="w-12">{"Adres:"}: </Label>
+                    <Input value={"ul. Staszica 5 w Stalowej Woli"} />
+                </div>
                 {["Lon", "Lat"].map((label, index) => (
                     <div
                         key={label}

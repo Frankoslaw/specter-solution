@@ -9,6 +9,7 @@ import {
     LocationQuestion,
 } from "@/components/HelpForm";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
     const [position, setPosition] = useState([50.56203, 22.05076]);
@@ -26,7 +27,9 @@ const HomePage = () => {
                     <ApartmentTypeQuestion />
                     <FloorsQuestion />
                     <BasementQuestion />
-                    <Button className="mt-6">Analizuj</Button>
+                    <Link to="/results">
+                        <Button className="w-full mt-6">Analizuj</Button>
+                    </Link>
                 </Card>
             </div>
         </div>
