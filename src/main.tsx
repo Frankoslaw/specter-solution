@@ -4,13 +4,23 @@ import "./index.css";
 import "leaflet/dist/leaflet.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePage from "./pages/HomePage.tsx";
+import FormPage from "./pages/Form.tsx";
 import ResultsPage from "./pages/ResultsPage.tsx";
+import HubPage from "./pages/Hub.tsx";
+import InterventionPage from "./pages/Intervention.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <HomePage />,
+        element: <HubPage />,
+    },
+    {
+        path: "/intervention",
+        element: <InterventionPage />,
+    },
+    {
+        path: "/form",
+        element: <FormPage />,
     },
     {
         path: "/results",

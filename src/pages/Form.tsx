@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-const HomePage = () => {
+const FormPage = () => {
     const [position, setPosition] = useState([50.56203, 22.05076]);
 
     return (
@@ -36,4 +36,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default FormPage;

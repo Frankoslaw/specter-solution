@@ -16,26 +16,23 @@ export const MyMap = ({ position, setPosition }: any) => {
     };
 
     return (
-        <div style={{ position: "relative" }}>
-            <MapContainer
-                center={position}
-                zoom={13}
-                scrollWheelZoom={true}
-                style={{ minHeight: "100vh", minWidth: "100vw", zIndex: 0 }} // neutral z-index
-            >
-                <TileLayer
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker
-                    position={position}
-                    draggable={true}
-                    eventHandlers={{
-                        dragend: handleMarkerDragEnd,
-                    }}
-                    ref={markerRef}
-                />
-            </MapContainer>
-        </div>
+        <MapContainer
+            center={position}
+            zoom={13}
+            style={{ minHeight: "100vh", minWidth: "100vw", zIndex: 0 }} // neutral z-index
+        >
+            <TileLayer
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker
+                position={position}
+                draggable={true}
+                eventHandlers={{
+                    dragend: handleMarkerDragEnd,
+                }}
+                ref={markerRef}
+            />
+        </MapContainer>
     );
 };
